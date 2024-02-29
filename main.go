@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"io"
 	"net/http"
 	"os"
@@ -27,6 +26,7 @@ type Stock struct {
 }
 
 func main() {
+	API_KEY := "SZPMBD2PGDOKGUJ3"
 	q := ""
 	if len(os.Args) >= 2 {
 		q = os.Args[1]
@@ -34,7 +34,7 @@ func main() {
 		panic("Syntax : stock *Symbol*, only one argument")
 	}
 
-	response, err := http.Get("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=" + q + "&interval=5min&outputsize=full&apikey=SZPMBD2PGDOKGUJ3")
+	response, err := http.Get("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=" + q + "&interval=5min&outputsize=full&apikey=" + API_KEY)
 	if err != nil {
 		panic(err)
 	}
@@ -58,7 +58,6 @@ func main() {
 	}
 
 	metadata := stock.MetaData
-	fmt.Printf("%s, %s\n", metadata.Symbol, metadata.Refreshed)
 
 	// Accéder au dernier élément de Time Series
 	lastTime := ""
