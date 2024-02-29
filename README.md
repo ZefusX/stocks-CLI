@@ -1,6 +1,7 @@
 # Get the price of a stock from your terminal
 
 Uses GO and Alphavantage API to get the stock price. 
+<br>
 **(/!\ If you don't want to get limited by the API change the API Key in the program and rebuild the EXE, the rate is 25 requests / day)**
 However if you're just curious and don't really care about stocks, you can use my API Key since I don't care about getting stocks price
 
