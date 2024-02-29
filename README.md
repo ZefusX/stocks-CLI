@@ -21,3 +21,7 @@ Low: 144.4900
 Close: 144.5000
 Volume: 172997
 ```
+
+
+
+*This is actually my first project using Go, I started learning it since last week*
