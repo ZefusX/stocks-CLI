@@ -28,5 +28,6 @@ Volume: 172997
 ```
 
 
+![ezgif-6-080caac07d](https://github.com/ZefusX/stocks-CLI/assets/116253674/60074fd4-bf25-446a-b4e7-4f429c2c102b)
 
 *This is actually my first project using Go, I started learning it since last week*
